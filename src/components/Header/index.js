@@ -26,9 +26,3 @@ export default function Header() {
     </HeaderStyled>
   );
 }
-
-// const mapStateToProps = state => ({
-//   cartSize: state.cart.length, // cart é o nome do reducer
-// });
-
-// export default connect(mapStateToProps)(Header);
