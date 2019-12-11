@@ -34,7 +34,7 @@ class Home extends Component {
     // dispatch(CartActions.addToCart(product));
 
     const { addToCartRequest } = this.props;
-    addToCart(id);
+    addToCartRequest(id);
   };
 
   render() {

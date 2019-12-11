@@ -9,7 +9,6 @@ import {
   MdDelete,
 } from 'react-icons/md';
 
-import produce from 'immer';
 import { formatPrice } from '../../util/format';
 
 import * as CartActions from '../../store/modules/cart/actions';
