@@ -42,7 +42,7 @@ function* addToCart({ id }) {
 }
 
 function* updateAmount({ id, amount }) {
-  if (amount >= 0) return;
+  if (amount <= 0) return;
 
   const stock = yield call(api.get, `/stock/${id}`);
   const stockAmount = stock.data.amount;
