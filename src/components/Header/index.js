@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { MdShoppingBasket } from 'react-icons/md';
 
@@ -8,7 +8,9 @@ import { HeaderStyled, Cart } from './styles';
 
 import logo from '../../assets/images/logo.svg';
 
-function Header({ cartSize }) {
+export default function Header() {
+  const cartSize = useSelector(state => state.cart.length);
+
   return (
     <HeaderStyled>
       <Link to="/">
@@ -25,8 +27,8 @@ function Header({ cartSize }) {
   );
 }
 
-const mapStateToProps = state => ({
-  cartSize: state.cart.length, // cart é o nome do reducer
-});
+// const mapStateToProps = state => ({
+//   cartSize: state.cart.length, // cart é o nome do reducer
+// });
 
-export default connect(mapStateToProps)(Header);
+// export default connect(mapStateToProps)(Header);
