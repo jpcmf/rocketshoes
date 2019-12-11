@@ -99,7 +99,10 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(CartActions, dispatch);
 
 Cart.propTypes = {
-  cart: PropTypes.shape({}).isRequired,
+  cart: PropTypes.any,
+  total: PropTypes.any,
+  removeFromCart: PropTypes.any,
+  updateAmountRequest: PropTypes.any,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
